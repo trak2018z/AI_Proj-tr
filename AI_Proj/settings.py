@@ -77,10 +77,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
-        'USER': 'rafal',
-        'PASSWORD': 'qazwsx2343#',
+        'USER':'rafal',
+        'PASSWORD':'qazwsx2343#',
+        'HOST':'localhost',
+        'PORT':'3306',
+
+        },
     }
-}
 
 
 # Password validation

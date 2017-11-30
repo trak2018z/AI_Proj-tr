@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from serwis import views as widoki
+from django.contrib.auth import views as auth
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', widoki.index),
+    url(r'logout/$', auth.logout, {'next_page': '/'}),
+    url(r'^register/$', widoki.register),
 ]

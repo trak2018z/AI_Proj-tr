@@ -1,0 +1,51 @@
+{% extends 'Base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+    <div class="container">
+        <h2>Rejestracja użytkownika</h2>
+        <br/><br/>
+        <form method="post">
+            {% csrf_token %}
+            {% if form.errors %}
+                {% for field in form %}
+                    {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.username.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="form-group label-static is-empty">
+                {{ form.username.label_tag }}
+                {% render_field form.username class="form-control" placeholder="Podaj login" %}
+            </div>
+            <div class="form-group label-static is-empty">
+                {{ form.password1.label_tag }}
+                {% render_field form.password1 class="form-control" placeholder="Wprowadź hasło" %}
+            </div>
+            <div class="form-group label-static is-empty">
+                {{ form.password2.label_tag }}
+                {% render_field form.password2 class="form-control" placeholder="Powtórz hasło" %}
+
+            </div>
+            <div class="form-group label-static is-empty">
+                {{ form.email.label_tag }}
+                {% render_field form.email class="form-control" placeholder="Wprowadź adres e-mail" %}
+
+            </div>
+            <div class="form-group label-static is-empty">
+                {{ form.location.label_tag }}
+                {% render_field form.location class="form-control" placeholder="Podaj miejsce zamieszkania" %}
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+{% endblock %}

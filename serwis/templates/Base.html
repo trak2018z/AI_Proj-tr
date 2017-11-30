@@ -1,0 +1,52 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Blog kulinarny{% endblock %}</title>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: steelblue">
+  <a class="navbar-brand">Moja Strona</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="/">Strona Domowa<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profil</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Ustawienia</a>
+      </li>
+      </li>
+    </ul>
+      <div class="float-right">
+          {% if user.is_authenticated %}
+              Zalogowano jako&nbsp;{{ user.username }}
+              <a href="/logout" class="btn btn-danger">Wyloguj</a>&nbsp; &nbsp;
+              {% else %}
+              <a href="/login" class="btn btn-secondary">Zaloguj</a>&nbsp; &nbsp;
+              <a href="/register" class="btn btn-info btn-">Rejestracja</a>
+          {% endif %}
+          &nbsp;&nbsp; &nbsp;
+      </div>
+
+  </div>
+</nav>
+    <div id="content">
+        {% block content %}
+            This is a fallback text
+
+        {% endblock %}
+    </div>
+</body>
+</html>

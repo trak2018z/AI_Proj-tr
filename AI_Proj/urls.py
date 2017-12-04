@@ -14,13 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from serwis import views as widoki
 from django.contrib.auth import views as auth
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/$', auth.login),
     url(r'^$', widoki.index),
-    url(r'logout/$', auth.logout, {'next_page': '/'}),
+    url(r'^logout/$', auth.logout, {'next_page': '/'}),
     url(r'^register/$', widoki.register),
-]
+    url(r'^post/(.*)$', widoki.post, name='post'),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

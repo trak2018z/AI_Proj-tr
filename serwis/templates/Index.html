@@ -1,7 +1,32 @@
 {% extends 'Base.html' %}
+{% load static %}
+{% block header %}
+    <div class="header-image text-center">
+        <img src="{% static '2.jpg' %}" class="img-fluid" alt="Responsive image">
+        <h1 class="display-3 text-center">Witaj na blogu kulinarnym</h1>
+    </div>
+{% endblock %}
 {% block content %}
-    <h2>Witaj na stronie poświęconej gotowaniu</h2>
-    <div>
-        <p>Narazie tu jeszcze nic nie ma!</p>
+    <div class="container">
+        <div class="row text-center row-m-t">
+            <div class="col-md-12">
+                <h1 class="text-center"> Ostatnie wpisy</h1>
+            </div>
+            <div class="card-columns">
+                {% for post in posts %}
+
+                    <div class="card">
+                        <a href="/post/{{ post.slug }}">
+                            <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
+                        </a>
+                        <div class="card-block">
+                            <h4 class="card-title">{{ post.tytul }}</h4>
+                            <p class="card-text">{{ post.podsumowanie }}</p>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
     </div>
 {% endblock %}

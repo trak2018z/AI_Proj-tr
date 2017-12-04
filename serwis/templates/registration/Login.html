@@ -2,7 +2,7 @@
 {% load widget_tweaks %}
 {% block content %}
     <div class="container">
-        <h2>Rejestracja użytkownika</h2>
+        <h2>Logowanie</h2>
         <br/><br/>
         <form method="post">
             {% csrf_token %}
@@ -20,25 +20,25 @@
                     </div>
                 {% endfor %}
             {% endif %}
+        <div class="container">
             <div class="form-group label-static is-empty">
-                {{ form.username.label_tag }}
-                {% render_field form.username class="form-control" placeholder="Podaj login" %}
+                <div class="input-group">
+                    <span class="input-group-addon" title="Użytkownik">
+                        Login
+                    </span>
+                    {% render_field form.username class="form-control" placeholder="Podaj login" %}
+                </div>
             </div>
             <div class="form-group label-static is-empty">
-                {{ form.password1.label_tag }}
-                {% render_field form.password1 class="form-control" placeholder="Wprowadź hasło" %}
+                <div class="input-group">
+                    <span class="input-group-addon" title="Hasło">
+                        Hasło
+                    </span>
+                    {% render_field form.password class="form-control" placeholder="Wprowadź hasło" %}
+                </div>
             </div>
-            <div class="form-group label-static is-empty">
-                {{ form.password2.label_tag }}
-                {% render_field form.password2 class="form-control" placeholder="Powtórz hasło" %}
-
+            <button type="submit" class="btn btn-info btn-block">Zaloguj</button>
             </div>
-            <div class="form-group label-static is-empty">
-                {{ form.email.label_tag }}
-                {% render_field form.email class="form-control" placeholder="Wprowadź adres e-mail" %}
-
-            </div>
-            <button type="submit" class="btn btn-info btn-block">Wyślij</button>
         </form>
     </div>
 {% endblock %}

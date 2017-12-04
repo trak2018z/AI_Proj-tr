@@ -2,12 +2,14 @@ from django.shortcuts import render, render_to_response, get_object_or_404, redi
 from django.http import HttpResponse
 from .forms import RegisterForm
 from django.contrib.auth import login, authenticate
+from .models import Post
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'Index.html', {})
+    posts = Post.objects.all()
+    return render(request, 'index.html', {'posts': posts})
 
 
 def register(request):
@@ -16,10 +18,7 @@ def register(request):
         print(form.errors)
 
         if form.is_valid():
-            user = form.save()
-            user.refresh_from_db()  # load the profile instance created by the signal
-            user.profil.lokacja = form.cleaned_data.get('location')
-            user.save()
+            form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
@@ -31,3 +30,10 @@ def register(request):
     else:
         form = RegisterForm()
     return render(request, 'registration/Rejestracja.html', {'form': form})
+
+
+def post(request, slug):
+    posts = Post.objects.all()
+    return render_to_response('Post.html', {
+        'post': get_object_or_404(Post, slug=slug),
+        'posts': posts})

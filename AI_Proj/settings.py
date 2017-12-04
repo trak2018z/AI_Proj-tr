@@ -25,7 +25,7 @@ SECRET_KEY = '6!-i9xr_&dm-42ct#taf-#+k4l*57c7#3asz3ff1_j$^5lu59t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rszydlowski.pythonanywhere.com']
 
 
 # Application definition
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'AI_Proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER':'rafal',
-        'PASSWORD':'drs300',
-        'HOST':'localhost',
+        'NAME': 'rszydlowski$django',
+        'USER':'rszydlowski',
+        'PASSWORD':'drs30000',
+        'HOST':'rszydlowski.mysql.pythonanywhere-services.com',
         'PORT':'3306',
         },
     }

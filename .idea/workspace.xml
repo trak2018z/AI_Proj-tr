@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/serwis/templates/Index.html" afterPath="$PROJECT_DIR$/serwis/templates/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/serwis/templates/registration/Login.html" afterPath="$PROJECT_DIR$/serwis/templates/registration/login.html" />
+    <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/settings.py" afterPath="$PROJECT_DIR$/AI_Proj/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Base.html" afterPath="$PROJECT_DIR$/serwis/templates/Base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Post.html" afterPath="$PROJECT_DIR$/serwis/templates/Post.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+            <state relative-caret-position="252">
+              <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -58,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
@@ -165,8 +161,8 @@
         <option value="$PROJECT_DIR$/serwis/templates/Index.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Post.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Base.html" />
-        <option value="$PROJECT_DIR$/AI_Proj/settings.py" />
         <option value="$PROJECT_DIR$/serwis/views.py" />
+        <option value="$PROJECT_DIR$/AI_Proj/settings.py" />
       </list>
     </option>
   </component>
@@ -569,11 +565,19 @@
       <option name="project" value="LOCAL" />
       <updated>1512385166929</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Wdrożenie aplikacji">
+      <created>1512397251194</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1512397251194</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -582,7 +586,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.4944547" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -609,7 +613,8 @@
     <MESSAGE value="First test commit" />
     <MESSAGE value="Utworzenie modelu, bedącego profilem użytkownika. Dodano rejestraację nowych użytkowników serwisu. Utworzono niezbędne widoki oraz szablony. Całość podpięto pod bazę danych MySQL. Dodano superużytkownika." />
     <MESSAGE value="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej." />
+    <MESSAGE value="Wdrożenie aplikacji" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wdrożenie aplikacji" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -911,14 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -936,6 +933,14 @@
           <folding>
             <element signature="e#0#84#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

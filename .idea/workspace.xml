@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/24972383-9db5-44ed-be37-6003ee90670f_20160712071745_Przepis-na-ciasto-ze-sliwkami-63.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/9a2463d45a9f7107bef30529f395814c9cd89463.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/Fluffy-Pancakes-New-CMS.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/jajecznica-3-2-891x500.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/zupa-krem-z-borowikow-165151.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/img/zupa-krem-z-borowikow-165151_6GbNb9O.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/static/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/static/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/static/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0002_auto_20171201_1422.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0003_auto_20171201_1426.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0004_auto_20171201_1429.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0005_auto_20171201_1432.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0006_auto_20171201_1436.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0007_auto_20171201_1439.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0008_auto_20171201_1450.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0009_post_obraz.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0010_auto_20171201_1507.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/templates/Post.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/templates/registration/Login.html" />
+    <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej.">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/serwis/templates/Index.html" afterPath="$PROJECT_DIR$/serwis/templates/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/serwis/templates/registration/Login.html" afterPath="$PROJECT_DIR$/serwis/templates/registration/login.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/settings.py" afterPath="$PROJECT_DIR$/AI_Proj/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/urls.py" afterPath="$PROJECT_DIR$/AI_Proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/admin.py" afterPath="$PROJECT_DIR$/serwis/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/models.py" afterPath="$PROJECT_DIR$/serwis/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Base.html" afterPath="$PROJECT_DIR$/serwis/templates/Base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Index.html" afterPath="$PROJECT_DIR$/serwis/templates/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/registration/Rejestracja.html" afterPath="$PROJECT_DIR$/serwis/templates/registration/Rejestracja.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/views.py" afterPath="$PROJECT_DIR$/serwis/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Post.html" afterPath="$PROJECT_DIR$/serwis/templates/Post.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +22,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+            <state relative-caret-position="29">
+              <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -74,8 +48,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/Index.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serwis/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
@@ -84,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/serwis/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="399">
+              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
               </folding>
@@ -99,27 +73,28 @@
       <file leaf-file-name="Post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/templates/Post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+            <state relative-caret-position="420">
+              <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
               <folding>
-                <element signature="e#875#907#0#HTML" expanded="true" />
+                <element signature="e#899#931#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/templates/Base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="64" column="12" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+            <state relative-caret-position="340">
+              <caret line="39" column="80" lean-forward="false" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#1656#1662#0#HTML" expanded="true" />
-                <element signature="e#2104#2110#0#HTML" expanded="true" />
-                <element signature="e#2423#2429#0#HTML" expanded="true" />
+                <element signature="e#2129#2135#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#2448#2454#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,7 +103,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="379">
               <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
@@ -137,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/registration/Login.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serwis/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
+            <state relative-caret-position="-398">
               <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding />
             </state>
@@ -171,7 +146,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
   </component>
@@ -184,14 +159,14 @@
         <option value="$PROJECT_DIR$/serwis/forms.py" />
         <option value="$PROJECT_DIR$/serwis/admin.py" />
         <option value="$PROJECT_DIR$/serwis/models.py" />
-        <option value="$PROJECT_DIR$/AI_Proj/settings.py" />
         <option value="$PROJECT_DIR$/serwis/templates/registration/Rejestracja.html" />
         <option value="$PROJECT_DIR$/AI_Proj/urls.py" />
         <option value="$PROJECT_DIR$/serwis/templates/registration/Login.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Index.html" />
-        <option value="$PROJECT_DIR$/serwis/views.py" />
         <option value="$PROJECT_DIR$/serwis/templates/Post.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Base.html" />
+        <option value="$PROJECT_DIR$/AI_Proj/settings.py" />
+        <option value="$PROJECT_DIR$/serwis/views.py" />
       </list>
     </option>
   </component>
@@ -282,7 +257,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI_Proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI_Proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serwis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -565,12 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512054884403</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej.">
+      <created>1512385166929</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1512385166929</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -579,7 +582,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.4944547" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1584318" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -605,7 +608,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First test commit" />
     <MESSAGE value="Utworzenie modelu, bedącego profilem użytkownika. Dodano rejestraację nowych użytkowników serwisu. Utworzono niezbędne widoki oraz szablony. Całość podpięto pod bazę danych MySQL. Dodano superużytkownika." />
-    <option name="LAST_COMMIT_MESSAGE" value="Utworzenie modelu, bedącego profilem użytkownika. Dodano rejestraację nowych użytkowników serwisu. Utworzono niezbędne widoki oraz szablony. Całość podpięto pod bazę danych MySQL. Dodano superużytkownika." />
+    <MESSAGE value="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie panelu logowania. Utworzenie modelu postu. Dodanie nowych styli, oraz nowego widoku strony startowej." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -662,7 +666,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/Index.html">
+    <entry file="file://$PROJECT_DIR$/serwis/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
@@ -676,13 +680,13 @@
           <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="e#1656#1662#0#HTML" expanded="true" />
-            <element signature="e#1757#1763#0#HTML" expanded="false" />
-            <element signature="e#1764#1770#0#HTML" expanded="false" />
-            <element signature="e#1862#1868#0#HTML" expanded="false" />
-            <element signature="e#1869#1875#0#HTML" expanded="false" />
-            <element signature="e#1988#1994#0#HTML" expanded="false" />
-            <element signature="e#1994#2000#0#HTML" expanded="false" />
-            <element signature="e#2001#2007#0#HTML" expanded="false" />
+            <element signature="e#1782#1788#0#HTML" expanded="false" />
+            <element signature="e#1789#1795#0#HTML" expanded="false" />
+            <element signature="e#1887#1893#0#HTML" expanded="false" />
+            <element signature="e#1894#1900#0#HTML" expanded="false" />
+            <element signature="e#2013#2019#0#HTML" expanded="false" />
+            <element signature="e#2019#2025#0#HTML" expanded="false" />
+            <element signature="e#2026#2032#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -850,24 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -883,35 +869,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/registration/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="34" column="24" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/Post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#875#907#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/Index.html">
+    <entry file="file://$PROJECT_DIR$/serwis/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
@@ -919,17 +877,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-398">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/templates/Post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="61" lean-forward="false" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+          <folding>
+            <element signature="e#899#931#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/templates/Base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="64" column="12" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+        <state relative-caret-position="340">
+          <caret line="39" column="80" lean-forward="false" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#1656#1662#0#HTML" expanded="true" />
-            <element signature="e#2104#2110#0#HTML" expanded="true" />
-            <element signature="e#2423#2429#0#HTML" expanded="true" />
+            <element signature="e#2129#2135#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2448#2454#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="63" column="35" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="e#641#673#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
           </folding>
         </state>
       </provider>

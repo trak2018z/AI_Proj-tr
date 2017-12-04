@@ -18,7 +18,7 @@
             <h2>{{ post.tytul }}</h2>
             <div>
                 {{ post.tresc|linebreaks }}
-                <img class="img-fluid" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
+                <img class="img-fluid img-thumbnail z-depth-1" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
                <p class="font-italic">autor: {{ post.autor.username }}</p>
             </div>
         </div>

@@ -37,7 +37,7 @@
         <div class="float-right">
             {% if user.is_authenticated %}
                 <span style="color: white; font-family: 'Bodoni MT Black'">Zalogowano jako&nbsp;{{ user.username }}</span>
-                <a href="/logout" class="btn btn-danger">Wyloguj</a>&nbsp; &nbsp;
+                <a href="/logout" class="btn btn-danger btn-rounded waves-effect">Wyloguj</a>&nbsp; &nbsp;
             {% else %}
                 <a href="/login" class="btn btn-success">Zaloguj</a>&nbsp; &nbsp;
                 <a href="/register" class="btn btn-warning">Rejestracja</a>

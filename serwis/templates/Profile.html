@@ -1,0 +1,38 @@
+{% extends 'Base.html' %}
+{% block header %}
+    <h3 class="text-center">Witaj {{ user.username }}</h3>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <a href="/">Powrót do strony domowej</a><br/><br/>
+        <div class="row">
+            <div class="col-md-2">
+                <h6 class="text-center text-bold">Kategorie:</h6>
+                <ul>
+                    <li><a href="/kat/s">Śniadanie</a></li>
+                    <li><a href="/kat/o">Obiad</a></li>
+                    <li><a href="/kat/d">Deser</a></li>
+                    <li><a href="/kat/k/">Kolacja</a></li>
+                    <li><a href="/kat/i">Inne</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10">
+                <h4 class="text-center">Twoje posty</h4>
+                <div class="card-columns">
+                    {% for post in posts %}
+                        <div class="card">
+                            <a href="/post/{{ post.rodzaj }}/{{ post.slug }}">
+                                <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
+                            </a>
+                            <div class="card-block">
+                                <h4 class="card-title">{{ post.tytul }}</h4>
+                                <p class="card-text">{{ post.podsumowanie }}</p>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

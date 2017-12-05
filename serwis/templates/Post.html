@@ -2,27 +2,37 @@
 {% block content %}
     <div class="container">
         <a href="/">Powrót do strony domowej</a><br/><br/>
-    <div class="row">
-        <div class="col-md-3">
-            <h6 class="text-center text-bold">Kategoria: {{ post.get_rodzaj_display }}</h6>
-            {% for foo in posts %}
-                {% if post.rodzaj == foo.rodzaj and post.tytul != foo.tytul %}
-                <div>
-                    <span class="summary-title"><a href="/post/{{ foo.slug }}">{{ foo.tytul }}</a> </span>
-                    <p class="summary">{{ foo.podsumowanie }}</p>
+        <div class="row">
+            {% if user.is_authenticated %}
+                <div class="col-md-3">
+                    <h6 class="text-center text-bold">Kategoria: {{ post.get_rodzaj_display }}</h6>
+                    {% for foo in posts %}
+                        {% if post.rodzaj == foo.rodzaj and post.tytul != foo.tytul %}
+                            <div>
+                                <span class="summary-title">
+                                    <a href="/post/{{ foo.rodzaj }}/{{ foo.slug }}">{{ foo.tytul }}</a> </span>
+                                <p class="summary">{{ foo.podsumowanie }}</p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
+            {% endif %}
+            <div class="col-md-9">
+                <h2>{{ post.tytul }}</h2>
+                {% if post.autor == user %}
+                    <div class="button-group">
+                        <a href="#" role="button" class="btn btn-outline-primary">Edytuj</a>
+                        <a href="/delete/{{ post.pk }}" class="btn btn-outline-danger" role="button">Usuń</a>
+                    </div>
                 {% endif %}
-            {% endfor %}
-        </div>
-        <div class="col-md-9">
-            <h2>{{ post.tytul }}</h2>
-            <div>
-                {{ post.tresc|linebreaks }}
-                <img class="img-fluid" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
-               <p class="font-italic">autor: {{ post.autor.username }}</p>
+                <div>
+                    {{ post.tresc|linebreaks }}
+                    <img class="img-fluid" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
+                    <p class="font-italic">autor: {{ post.autor.username }}</p>
+
+                </div>
             </div>
         </div>
-    </div>
     </div>
 {% endblock %}
 {% block title %}Blog kulinarny: {{ post.tytul }}{% endblock %}

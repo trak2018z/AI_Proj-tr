@@ -26,5 +26,8 @@ urlpatterns = [
     url(r'^$', widoki.index),
     url(r'^logout/$', auth.logout, {'next_page': '/'}),
     url(r'^register/$', widoki.register),
-    url(r'^post/(.*)$', widoki.post, name='post'),
+    url(r'^delete/(?P<post_pk>.*)$', widoki.usun, name='usun'),
+    url(r'^post/(.*)/(.*)$', widoki.post, name='post'),
+    url(r'^kat/(.*)$', widoki.wpis, name='kat'),
+    url(r'^profile/(.*)$', widoki.profile, name='profile'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

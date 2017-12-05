@@ -1,20 +1,9 @@
 {% extends 'Base.html' %}
-{% load static %}
-{% block header %}
-    <div class="header-image text-center">
-        <img src="{% static '2.jpg' %}" class="img-fluid" alt="Responsive image">
-        <h1 class="display-3 text-center">Witaj na blogu kulinarnym</h1>
-    </div>
-{% endblock %}
 {% block content %}
     <div class="container">
-        <div class="row text-center row-m-t">
-            <div class="col-md-12">
-                <h1 class="text-center"> Ostatnie wpisy</h1>
-            </div>
+        <div class="row">
             <div class="card-columns">
-                {% for post in posts %}
-
+                {% for post in kategoria %}
                     <div class="card">
                         <a href="/post/{{ post.rodzaj }}/{{ post.slug }}">
                             <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
@@ -24,8 +13,10 @@
                             <p class="card-text">{{ post.podsumowanie }}</p>
                         </div>
                     </div>
-
                 {% endfor %}
+                {% if not kategoria %}
+                    <p>Brak danych</p>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -1,14 +1,17 @@
-from django.shortcuts import render, render_to_response, get_object_or_404, redirect
+from django.shortcuts import render, render_to_response, get_object_or_404, get_list_or_404, redirect
 from django.http import HttpResponse
 from .forms import RegisterForm
 from django.contrib.auth import login, authenticate
-from .models import Post
+from .models import Post, Profil, User
 
 # Create your views here.
 
 
 def index(request):
-    posts = Post.objects.all()
+    if request.user.is_authenticated:
+        posts = Post.objects.all()
+    else:
+        posts = Post.objects.all()[:3]
     return render(request, 'index.html', {'posts': posts})
 
 
@@ -32,8 +35,28 @@ def register(request):
     return render(request, 'registration/Rejestracja.html', {'form': form})
 
 
-def post(request, slug):
+def post(request, kat, slug):
     posts = Post.objects.all()
     return render_to_response('Post.html', {
         'post': get_object_or_404(Post, slug=slug),
-        'posts': posts})
+        'posts': posts,
+        'user': request.user})
+
+
+def profile(request, name):
+    posts = Post.objects.filter(autor=request.user)
+    return render_to_response('Profile.html', {'profil': get_object_or_404(User, username=name),
+                                               'user': request.user,
+                                               'posts': posts})
+
+
+def wpis(request, cat):
+    kat = Post.objects.filter(rodzaj=cat)
+    return render_to_response("Kategoria.html", {'user': request.user,
+                                                 'kategoria': kat})
+
+
+def usun(request, post_pk):
+    qw = Post.objects.get(pk=post_pk)
+    qw.delete()
+    return redirect('/profile/' + request.user.username)

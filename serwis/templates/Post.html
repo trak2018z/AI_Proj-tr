@@ -1,7 +1,7 @@
 {% extends 'Base.html' %}
 {% block content %}
     <div class="container">
-        <a href="/">Powrót do strony domowej</a><br/><br/>
+        <a href="/">Powrót do strony głównej</a><br/><br/>
         <div class="row">
             {% if user.is_authenticated %}
                 <div class="col-md-3">
@@ -21,18 +21,32 @@
                 <h2>{{ post.tytul }}</h2>
                 {% if post.autor == user %}
                     <div class="button-group">
-                        <a href="#" role="button" class="btn btn-outline-primary">Edytuj</a>
-                        <a href="/delete/{{ post.pk }}" class="btn btn-outline-danger" role="button">Usuń</a>
+                        <a href="{% url 'edytuj' post.pk %}" class="btn btn-outline-primary">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            Edytuj
+                        </a>
+                        <!--<a href="{% url 'usun' post.pk %}" class="btn btn-outline-danger" role="button">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            Usuń
+                        </a>-->
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                                data-target="#exampleModal">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            Usuń
+                        </button>
                     </div>
                 {% endif %}
                 <div>
                     {{ post.tresc|linebreaks }}
-                    <img class="img-fluid" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
+                    {% if post.obraz %}
+                        <img class="img-fluid" src="{{ post.obraz.url }}" style="width: 60%; height: auto">
+                    {% endif %}
                     <p class="font-italic">autor: {{ post.autor.username }}</p>
 
                 </div>
             </div>
         </div>
     </div>
+    {% include 'Modal.html' %}
 {% endblock %}
 {% block title %}Blog kulinarny: {{ post.tytul }}{% endblock %}

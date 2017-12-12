@@ -1,4 +1,5 @@
 {% extends 'Base.html' %}
+{% load static %}
 {% block header %}
     <h3 class="text-center">Witaj {{ user.username }}</h3>
 {% endblock %}
@@ -9,20 +10,36 @@
             <div class="col-md-2">
                 <h6 class="text-center text-bold">Kategorie:</h6>
                 <ul>
-                    <li><a href="/kat/s">Śniadanie</a></li>
-                    <li><a href="/kat/o">Obiad</a></li>
-                    <li><a href="/kat/d">Deser</a></li>
-                    <li><a href="/kat/k/">Kolacja</a></li>
-                    <li><a href="/kat/i">Inne</a></li>
+                    <li><a href="{% url 'kat' 's' %}">Śniadanie</a></li>
+                    <li><a href="{% url 'kat' 'o' %}">Obiad</a></li>
+                    <li><a href="{% url 'kat' 'd' %}">Deser</a></li>
+                    <li><a href="{% url 'kat' 'k' %}">Kolacja</a></li>
+                    <li><a href="{% url 'kat' 'i' %}">Inne</a></li>
                 </ul>
+                <a href="{% url 'nowy' %}" class="btn btn-primary">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    Dodaj nowy post
+                </a>
             </div>
             <div class="col-md-10">
                 <h4 class="text-center">Twoje posty</h4>
                 <div class="card-columns">
                     {% for post in posts %}
                         <div class="card">
-                            <a href="/post/{{ post.rodzaj }}/{{ post.slug }}">
-                                <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
+                            <a href="{% url 'post' post.rodzaj post.slug %}">
+                                {% if post.obraz %}
+                            <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
+                            {% elif not post.obraz and post.rodzaj == "s" %}
+                                <img class="card-img-top img-fluid" src="{% static 's3.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'o' %}
+                                <img class="card-img-top img-fluid" src="{% static 'o1.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'd' %}
+                                <img class="card-img-top img-fluid" src="{% static 'd1.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'i' %}
+                                <img class="card-img-top img-fluid" src="{% static 'inne.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'k' %}
+                                <img class="card-img-top img-fluid" src="{% static 'k1.jpg' %}">
+                            {% endif %}
                             </a>
                             <div class="card-block">
                                 <h4 class="card-title">{{ post.tytul }}</h4>

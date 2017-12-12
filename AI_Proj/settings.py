@@ -26,7 +26,8 @@ SECRET_KEY = '6!-i9xr_&dm-42ct#taf-#+k4l*57c7#3asz3ff1_j$^5lu59t'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+#config PythonAnywhere
+#ALLOWED_HOSTS = ['rszydlowski.pythonanywhere.com']
 
 # Application definition
 
@@ -87,7 +88,18 @@ DATABASES = {
         'PORT':'3306',
         },
     }
-
+#config dla PythonAnywhere
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'rszydlowski$django',
+#         'USER':'rszydlowski',
+#         'PASSWORD':'drs30000',
+#         'HOST':'rszydlowski.mysql.pythonanywhere-services.com',
+#         'PORT':'3306',
+#         },
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

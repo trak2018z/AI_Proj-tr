@@ -14,8 +14,8 @@ class Profil(models.Model):
         ('F', 'Kobieta'),
     )
     uzytkownik = models.OneToOneField(User, on_delete=models.CASCADE)
-    lokacja = models.CharField(max_length=40, blank=True, null=True)
-    data_ur = models.DateField(null=True, blank=True)
+    lokacja = models.CharField(max_length=40, blank=True, null=True,)
+    wiek = models.IntegerField(blank=True, null=True)
     plec = models.CharField(max_length=1, choices=PLCI, null=False, default='M')
 
     @receiver(post_save, sender=User)

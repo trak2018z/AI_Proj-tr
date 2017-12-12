@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--<script src="https://use.fontawesome.com/1f5b23a5de.js"></script>-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,29 +26,46 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link active" href="/">Strona Domowa<span class="sr-only">(current)</span></a>
+                <a class="nav-link active" href="/">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    Strona Domowa
+                    <span class="sr-only">(current)</span>
+                </a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link" href="/profile/{{ user.username }}">Profil</a>
+                <a class="nav-link" href={% url 'profile' user.username %}>
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    Profil
+                </a>
+            </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'ustaw' %}">
+                    <i class="fa fa-cog fa-spin fa-lg fa-fw"></i>
+                    Ustawienia
+                </a>
             </li>
             {% endif %}
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ustawienia</a>
-            </li>
             </li>
         </ul>
         <div class="float-right">
             {% if user.is_authenticated %}
                 <span style="color: white; font-family: 'Bodoni MT Black'">Zalogowano jako&nbsp;{{ user.username }}</span>
-                <a href="/logout" class="btn btn-danger">Wyloguj</a>&nbsp; &nbsp;
+                <a href="/logout" class="btn btn-danger">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                     Wyloguj
+                </a>&nbsp; &nbsp;
             {% else %}
-                <a href="/login" class="btn btn-success">Zaloguj</a>&nbsp; &nbsp;
-                <a href="/register" class="btn btn-warning">Rejestracja</a>
+                <a href="/login" class="btn btn-success">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    Zaloguj</a>&nbsp; &nbsp;
+                <a href="/register" class="btn btn-info">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Rejestracja
+                </a>
             {% endif %}
             &nbsp;&nbsp; &nbsp;
         </div>
-
     </div>
 </nav>
 <div id="header">
@@ -59,14 +78,14 @@
     {% endblock %}
 </div>
 {% block footer %}
-    <div style="position: fixed;
+    <div style="position: relative;
    bottom: 0;
    width: 100%;
    left: 0;
    padding: 1rem;
    height: 3rem;
    background-color: transparent;
-   text-align: right;
+   text-align: center;
    clear: both;">
         &copy; Rafał Szydłowski 2017
 

@@ -1,0 +1,54 @@
+{% extends 'Base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+    <div class="container">
+        <h2 class="text-center">Uzupełnij dane</h2>
+        <br/>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <div class="form-row ">
+                <div class="col-md-6">
+                    <div class="form-group label-static is-empty">
+                        {{ form.tytul.label_tag }}
+                        {% render_field form.tytul class="form-control" placeholder="Podaj tytuł posta" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ form.podsumowanie.label_tag }}
+                        {% render_field form.podsumowanie class="form-control" placeholder="Podsumuj krótko swój post" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ form.rodzaj.label_tag }}
+                        {% render_field form.rodzaj class="custom-select" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ form.tresc.label_tag }}
+                        {% render_field form.tresc class="form-control" placeholder="Uzupełnij treść posta"%}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ form.obraz.label_tag }}<br>
+                        {% render_field form.obraz %}
+                    </div>
+                    <button type="submit" class="btn btn-info float-right">Zatwierdź zmiany</button>
+                    <div>
+                        {{ form.obraz.url }}
+                    </div>
+                    </div>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

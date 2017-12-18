@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'serwis',
     'bootstrap4',
-    'widget_tweaks'
+    'widget_tweaks',
+    'ratings',
 ]
 
 MIDDLEWARE = [

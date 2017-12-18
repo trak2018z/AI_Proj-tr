@@ -2,40 +2,72 @@
 {% load widget_tweaks %}
 {% block content %}
     <div class="container">
-    <script type="text/javascript"
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7AXHUX-aqL1GFCiyknUR4W019vIN0t4s">
-    </script>
-    <script type="text/javascript">
-         var map;
-         var geocoder = new google.maps.Geocoder();
-        function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(52,20),
-          zoom: 7,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      }
-      function codeAddress() {
-    var address = document.getElementById('id_lokacja').value;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-      if (status == 'OK') {
-        map.setCenter(results[0].geometry.location);
-        var marker = new google.maps.Marker({
-            map: map,
-            position: results[0].geometry.location
-        });
-      } else {
-        alert('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-    $( document ).ready(function() {
-        initialize();
-        codeAddress();
-    })
-    </script>
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7AXHUX-aqL1GFCiyknUR4W019vIN0t4s">
+        </script>
+        <script type="text/javascript">
+            var map;
+            var pos;
+            var geocoder = new google.maps.Geocoder();
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(52, 20),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
+            }
+            function codeAddress() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        pos = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+                        map.setCenter(pos);
+                        geocoder.geocode({'location': new google.maps.LatLng(pos.lat, pos.lng)}, function (results, status) {
+                            if (status == 'OK') {
+                                var marker2 = new google.maps.Marker({
+                                    map: map,
+                                    position: pos,
+                                    title: document.getElementById('id_username').value
+                                });
+                               // window.alert("Adres" + " " + results[0].formatted_address);
+                            } else {
+                                alert('Geocode was not successful for the following reason: ' + status);
+                            }
+                        });
+                    },err);
+
+                }
+                function err(){
+                    var address = document.getElementById('id_lokacja').value;
+                    //window.alert(address);
+                    geocoder.geocode({'address': address}, function (results, status) {
+                        if (status == 'OK') {
+                            map.setCenter(results[0].geometry.location);
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: results[0].geometry.location
+                            });
+                        } else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                        }
+                    });
+                }
+
+            }
+
+            $(document).ready(function () {
+
+
+                initialize();
+                codeAddress();
+
+            });
+
+        </script>
 
         <h2>Witaj {{ user.username }}!!</h2>
         <p class="font-weight-bold">Twoje dane:</p>
@@ -56,32 +88,34 @@
                 {% endfor %}
             {% endif %}
             <div class="form-row">
-            <div class="col-md-6">
-                <div class="form-group label-static is-empty">
-                    <label for="id_username">Użytkownik:</label>
-                    <input type="text" readonly class="form-control" id="id_username" value="{{ user.username }}">
-                </div>
-                 <div class="form-group label-static is-empty">
-                    {{ user_form.email.label_tag }}
-                    {% render_field user_form.email class="form-control" placeholder="Wpisz adres email" %}
-                </div>
-                <div class="form-group label-static is-empty">
-                    {{ prof_form.lokacja.label_tag }}
-                    {% render_field prof_form.lokacja class="form-control" placeholder="Podaj swą lokalizację" %}
-                </div>
-                 <div class="form-group label-static is-empty">
-                    {{ prof_form.wiek.label_tag }}
-                    {% render_field prof_form.wiek class="form-control" placeholder="Wprowadź swój wiek" %}
-                </div>
-                <div class="form-group label-static is-empty">
+                <div class="col-md-6">
+                    <div class="form-group label-static is-empty">
+                        <label for="id_username">Użytkownik:</label>
+                        <input type="text" readonly class="form-control" id="id_username" value="{{ user.username }}">
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ user_form.email.label_tag }}
+                        {% render_field user_form.email class="form-control" placeholder="Wpisz adres email" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ prof_form.lokacja.label_tag }}
+                        {% render_field prof_form.lokacja class="form-control" placeholder="Podaj swą lokalizację" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
+                        {{ prof_form.wiek.label_tag }}
+                        {% render_field prof_form.wiek class="form-control" placeholder="Wprowadź swój wiek" %}
+                    </div>
+                    <div class="form-group label-static is-empty">
                         {{ prof_form.plec.label_tag }}<br>
                         {% render_field prof_form.plec %}
+                    </div>
+                    <button type="submit" class="btn btn-info float-right">Zatwierdź zmiany</button>
                 </div>
-                <button type="submit" class="btn btn-info float-right">Zatwierdź zmiany</button>
-            </div>
-        <div class="col-md-6">
-            <div id="map-canvas" style="height: 300px; width: 600px;"></div>
-        </div>
+                {% if request.user.profil.lokacja %}
+                <div class="col-md-6">
+                    <div id="map-canvas" style="height: 300px; width: 600px;"></div>
+                </div>
+                {% endif %}
             </div>
         </form>
 

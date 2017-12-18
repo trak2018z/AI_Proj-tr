@@ -2,9 +2,11 @@ from django.shortcuts import render, render_to_response, get_object_or_404, get_
 from django.http import HttpResponse
 from .forms import RegisterForm, PostForm, ProfileForm, UserForm
 from django.contrib.auth import login, authenticate
-from .models import Post, Profil, User
+from .models import Post, Profil, User, Friend
 from slugify import *
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
@@ -56,13 +58,13 @@ def wpis(request, kat):
     return render_to_response("Kategoria.html", {'user': request.user,
                                                  'kategoria': cat})
 
-
+@login_required
 def usun(request, post_pk):
     qw = Post.objects.get(pk=post_pk)
     qw.delete()
     return redirect('/profile/' + request.user.username)
 
-
+@login_required
 def utworz(request):
     user = request.user
     if request.method == "POST":
@@ -80,6 +82,7 @@ def utworz(request):
     return render(request, 'Dodaj.html', {'form': form})
 
 
+@login_required
 def edytuj(request, pk):
     user = request.user
     post = get_object_or_404(Post, pk=pk)
@@ -91,7 +94,6 @@ def edytuj(request, pk):
             post.autor = user
             post.slug = slugify(form.cleaned_data.get('tytul'), to_lower=True)
             post.save()
-            messages.success(request, ("Your profile was successfully updated!"))
             return redirect('profile', name=user.username)
     else:
         form = PostForm(instance=post)
@@ -115,3 +117,32 @@ def ustawienia(request):
         prof_form = ProfileForm(instance=user.profil)
 
     return render(request, "Ustawienia.html", {'user_form': user_form, 'prof_form': prof_form})
+
+
+@login_required
+def znajomi(request):
+    users = User.objects.exclude(id=request.user.id)
+    friend, created = Friend.objects.get_or_create(current_user=request.user)
+    other = Friend.objects.exclude(current_user=request.user)
+    obs = other.filter(friends__username__contains=request.user.username)
+
+    fr = friend.friends.all()
+    return render(request, 'Znajomi.html', {'users': users, 'friends': fr, 'followers': obs})
+
+
+@login_required
+def znaj_akcje(request, action, pk):
+    new_friend = User.objects.get(pk=pk)
+    if action == 'add':
+        Friend.dodawanie(request.user, new_friend)
+    elif action == 'remove':
+        Friend.usuwanie(request.user, new_friend)
+    return redirect('znajomi')
+
+
+@login_required
+def znaj_prof(request, pk):
+    user = request.user
+    friend = User.objects.get(pk=pk)
+    posts = Post.objects.filter(autor=friend)
+    return render(request, 'ProfInfo.html', {"user": user, "friend": friend, "posts": posts})

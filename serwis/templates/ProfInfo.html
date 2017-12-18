@@ -1,0 +1,49 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block header %}
+    <h3 class="text-center">Informacje o Profilu użytkownika</h3>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Dane:</h4>
+                <p class=>Nazwa: {{ friend.username }}</p>
+                <p>Email: {{ friend.email }}</p>
+                <p>Wiek: {% if friend.profil.wiek %}{{ friend.profil.wiek }}{% else %}Brak{% endif %}</p>
+                <p>Płeć: {% if friend.profil.plec %}{{ friend.profil.get_plec_display }}{% else %}Brak{% endif %}</p>
+                <p>Lokacja: {% if friend.profil.lokacja %}{{ friend.profil.lokacja }}{% else %}Brak{% endif %}</p>
+                <p>Liczba postów: {% if posts %}{{ posts.count }}{% else %}0{% endif %}</p>
+            </div>
+            <div class="col-md-9">
+                <div class="card-columns">
+                    {% for post in posts %}
+                        <div class="card">
+                            <a href="{% url 'post' post.rodzaj post.slug %}">
+                                {% if post.obraz %}
+                            <img class="card-img-top img-fluid" src="{{ post.obraz.url }}">
+                            {% elif not post.obraz and post.rodzaj == "s" %}
+                                <img class="card-img-top img-fluid" src="{% static 's3.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'o' %}
+                                <img class="card-img-top img-fluid" src="{% static 'o1.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'd' %}
+                                <img class="card-img-top img-fluid" src="{% static 'd1.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'i' %}
+                                <img class="card-img-top img-fluid" src="{% static 'inne.jpg' %}">
+                            {% elif not post.obraz and post.rodzaj == 'k' %}
+                                <img class="card-img-top img-fluid" src="{% static 'k1.jpg' %}">
+                            {% endif %}
+                            </a>
+                            <div class="card-block">
+                                <h4 class="card-title">{{ post.tytul }}</h4>
+                                <p class="card-text">{{ post.podsumowanie }}</p>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <p>Ten użytkownik nie dodał jeszcze żadnego posta</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

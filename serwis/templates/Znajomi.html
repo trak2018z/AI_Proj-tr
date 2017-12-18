@@ -1,0 +1,178 @@
+{% extends 'Base.html' %}
+{% block content %}
+
+    <div class="container">
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7AXHUX-aqL1GFCiyknUR4W019vIN0t4s&libraries=geometry">
+        </script>
+        <script type="text/javascript">
+            var curr;
+            var map;
+            var pos;
+            var geocoder = new google.maps.Geocoder();
+            function initialize() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(52, 20),
+                    zoom: 7,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(document.getElementById("map-canvas"),
+                    mapOptions);
+            }
+            function codeAddress() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        if (position) {
+
+
+                            pos = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+
+                            map.setCenter(pos);
+                            geocoder.geocode({'location': new google.maps.LatLng(pos.lat, pos.lng)}, function (results, status) {
+                                if (status == 'OK') {
+                                    var marker2 = new google.maps.Marker({
+                                        map: map,
+                                        position: pos
+                                    });
+
+                                    curr = new google.maps.LatLng(pos.lat, pos.lng);
+                                    us();
+                                    others();
+                                } else {
+                                    alert('Geocode was not successful for the following reason: ' + status);
+                                }
+                            });
+                        }
+                    }, err);
+
+                }
+
+                function err() {
+                    var user = '{{ request.user.profil.lokacja }}';
+                    geocoder.geocode({'address': user}, function (results, status) {
+                        if (status == 'OK') {
+                            map.setCenter(results[0].geometry.location);
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: results[0].geometry.location
+                            });
+                            curr = results[0].geometry.location;
+                            us();
+                            others();
+                        } else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                        }
+                    });
+                }
+
+            }
+            function us(){
+                {% for user in users %}
+                    {% if user not in friends and user.profil.lokacja %}
+                        var adres = '{{ user.profil.lokacja }}';
+                         geocoder.geocode({'address': adres}, function (results, status) {
+                            if (status == 'OK') {
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: results[0].geometry.location,
+                                    title: '{{ user.username }}'
+                                });
+                                var frloc = results[0].geometry.location;
+                                var distance = google.maps.geometry.spherical.computeDistanceBetween(curr, frloc);
+                                var dsfixed = (distance / 1000).toFixed(2);
+
+                                var sth = '<div class="hide"><li>Nazwa: {{ user.username }}<br/>Płeć: {{ user.profil.get_plec_display }} <br/>{% if user.profil.wiek %}Wiek: {{ user.profil.wiek }} lat<br/>{% else %}Wiek: Brak <br/>{% endif %}{% if user.profil.lokacja %}Lokacja: {{ user.profil.lokacja }}<br/>{% else %}Lokacja: Brak<br/>{% endif %}<div class="odl"></div></li><a href="{% url 'znaj_akcje' pk=user.pk action='add' %}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Dodaj Znajomego</a></div>';
+                                if (dsfixed < 300) {
+                                    $("ul.sample").append(sth);
+                                    $("div.odl").replaceWith("Odległość: " + dsfixed + " km"+ "</br>");
+                                }
+                            } else {
+                                alert('Geocode was not successful for the following reason: ' + status);
+                            }
+                        });
+
+                    {% endif %}
+                {% endfor %}
+            }
+            function others() {
+                {% for friend in friends %}
+                    {% if friend.profil.lokacja %}
+                        var user = '{{ friend.profil.lokacja }}';
+                        geocoder.geocode({'address': user}, function (results, status) {
+                            if (status == 'OK') {
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: results[0].geometry.location,
+                                    title: '{{ friend.username }}'
+                                });
+
+                            } else {
+                                alert('Geocode was not successful for the following reason: ' + status);
+                            }
+                        });
+                    {% endif %}
+                {% endfor %}
+
+            }
+
+            $(document).ready(function () {
+
+
+                initialize();
+                codeAddress();
+
+
+            });
+        </script>
+        <h2>Panel znajomych</h2>
+        <br/>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Proponowani znajomi blisko Ciebie</h4>
+                <ul class="sample">
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Osoby, których obserwujesz</h4>
+                {% for friend in friends %}
+                    <ui>
+                        <li><a href="{% url 'znaj_prof' friend.id %}">{{ friend.username }}</a></li>
+                        <a href="{% url 'znaj_akcje' pk=friend.pk action='remove' %}" class="btn btn-danger">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            Usuń Znajomego
+                        </a>
+                    </ui>
+                {% empty %}
+                    Brak znajomych
+                {% endfor %}
+            </div>
+            <div class="col-md-3">
+                <h4>Osoby które Cie obserwują</h4>
+                {% for person in followers %}
+                    <ui>
+                        <li>
+                            <a href="{% url 'znaj_prof' person.current_user.pk %}">{{ person }}</a>
+                        </li>
+
+                    </ui>
+                {% empty %}
+                    Brak followersow
+                {% endfor %}
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="map-canvas" style="height: 300px; width: 600px;">
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

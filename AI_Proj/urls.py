@@ -23,7 +23,7 @@ from django.contrib.auth import views as auth
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', auth.login),
-    url(r'^$', widoki.index),
+    url(r'^$', widoki.index, name='index'),
     url(r'^logout/$', auth.logout, {'next_page': '/'}),
     url(r'^settings/$', widoki.ustawienia, name='ustaw'),
     url(r'^register/$', widoki.register),
@@ -33,4 +33,7 @@ urlpatterns = [
     url(r'^post/(?P<kat>[\w])/$', widoki.wpis, name='kat'),
     url(r'^post/(?P<kat>[\w]+)/(?P<slug>[-\w]+)$', widoki.post, name='post'),
     url(r'^profile/(?P<name>[\w]+)$', widoki.profile, name='profile'),
+    url(r'^friends/$', widoki.znajomi, name='znajomi'),
+    url(r'^friends/(?P<pk>\d+)/$', widoki.znaj_prof, name='znaj_prof'),
+    url(r'^friends/(?P<pk>\d+)/(?P<action>[\w]+)$', widoki.znaj_akcje, name='znaj_akcje'),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

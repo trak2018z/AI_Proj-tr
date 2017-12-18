@@ -53,3 +53,26 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('serwis.views.post', args=[self.slug])
+
+
+class Friend(models.Model):
+    friends = models.ManyToManyField(User, related_name='Lista_Znajomych')
+    current_user = models.ForeignKey(User, related_name='Wlasciciel', null=True)
+
+
+    @classmethod
+    def dodawanie(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(
+            current_user=current_user
+        )
+        friend.friends.add(new_friend)
+
+    @classmethod
+    def usuwanie(cls, current_user, new_friend):
+        friend, created = cls.objects.get_or_create(
+            current_user=current_user
+        )
+        friend.friends.remove(new_friend)
+
+    def __str__(self):
+        return str(self.current_user)

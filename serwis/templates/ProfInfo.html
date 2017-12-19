@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-3">
                 <h4>Dane:</h4>
-                <p class=>Nazwa: {{ friend.username }}</p>
+                <p>Nazwa: {{ friend.username }}</p>
                 <p>Email: {{ friend.email }}</p>
                 <p>Wiek: {% if friend.profil.wiek %}{{ friend.profil.wiek }}{% else %}Brak{% endif %}</p>
                 <p>Płeć: {% if friend.profil.plec %}{{ friend.profil.get_plec_display }}{% else %}Brak{% endif %}</p>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         {% empty %}
-                        <p>Ten użytkownik nie dodał jeszcze żadnego posta</p>
+                        <p>Brak postów</p>
                     {% endfor %}
                 </div>
             </div>

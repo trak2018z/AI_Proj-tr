@@ -42,8 +42,8 @@
 
                 }
                 function err(){
-                    var address = document.getElementById('id_lokacja').value;
-                    //window.alert(address);
+                    {% if request.user.profil.lokacja %}
+                    var address = '{{ request.user.profil.lokacja }}';
                     geocoder.geocode({'address': address}, function (results, status) {
                         if (status == 'OK') {
                             map.setCenter(results[0].geometry.location);
@@ -55,6 +55,9 @@
                             alert('Geocode was not successful for the following reason: ' + status);
                         }
                     });
+                        {% else %}
+                        $("#map-canvas").replaceWith("");
+                    {% endif %}
                 }
 
             }
@@ -111,11 +114,9 @@
                     </div>
                     <button type="submit" class="btn btn-info float-right">Zatwierdź zmiany</button>
                 </div>
-                {% if request.user.profil.lokacja %}
                 <div class="col-md-6">
                     <div id="map-canvas" style="height: 300px; width: 600px;"></div>
                 </div>
-                {% endif %}
             </div>
         </form>
 

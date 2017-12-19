@@ -13,12 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from serwis import views as widoki
 from django.contrib.auth import views as auth
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -36,4 +37,8 @@ urlpatterns = [
     url(r'^friends/$', widoki.znajomi, name='znajomi'),
     url(r'^friends/(?P<pk>\d+)/$', widoki.znaj_prof, name='znaj_prof'),
     url(r'^friends/(?P<pk>\d+)/(?P<action>[\w]+)$', widoki.znaj_akcje, name='znaj_akcje'),
+    url(r'^api/$', widoki.api, name='api2'),
+    url(r'^api/(?P<pk>\d+)/$', widoki.api_detail, name='api_detail')
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns = format_suffix_patterns(urlpatterns)

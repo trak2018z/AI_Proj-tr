@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/migrations/0012_friend.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/templates/ProfInfo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/templates/Znajomi.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/serializer.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c_dXfqsY4_eyb7qmr.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/settings.py" afterPath="$PROJECT_DIR$/AI_Proj/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/urls.py" afterPath="$PROJECT_DIR$/AI_Proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/admin.py" afterPath="$PROJECT_DIR$/serwis/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/models.py" afterPath="$PROJECT_DIR$/serwis/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Base.html" afterPath="$PROJECT_DIR$/serwis/templates/Base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Post.html" afterPath="$PROJECT_DIR$/serwis/templates/Post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/ProfInfo.html" afterPath="$PROJECT_DIR$/serwis/templates/ProfInfo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Ustawienia.html" afterPath="$PROJECT_DIR$/serwis/templates/Ustawienia.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Znajomi.html" afterPath="$PROJECT_DIR$/serwis/templates/Znajomi.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/views.py" afterPath="$PROJECT_DIR$/serwis/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,18 +38,8 @@
       <file leaf-file-name="Ustawienia.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/templates/Ustawienia.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" column="93" lean-forward="false" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Modal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/Modal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="379">
+              <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -60,9 +48,11 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="77" column="37" lean-forward="false" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="280">
+              <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,9 +60,11 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="819">
+              <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding>
+                <element signature="e#641#682#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,10 +72,10 @@
       <file leaf-file-name="Znajomi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/templates/Znajomi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="86" column="173" lean-forward="false" selection-start-line="86" selection-start-column="173" selection-end-line="86" selection-end-column="173" />
+            <state relative-caret-position="231">
+              <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
               <folding>
-                <element signature="e#7465#7501#0#HTML" expanded="true" />
+                <element signature="e#8377#8413#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,51 +84,42 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+            <state relative-caret-position="189">
+              <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="o1.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serwis/static/o1.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="9a2463d45a9f7107bef30529f395814c9cd89463.jpeg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/img/9a2463d45a9f7107bef30529f395814c9cd89463.jpeg">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="24972383-9db5-44ed-be37-6003ee90670f_20160712071745_Przepis-na-ciasto-ze-sliwkami-63.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/img/24972383-9db5-44ed-be37-6003ee90670f_20160712071745_Przepis-na-ciasto-ze-sliwkami-63.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serwis/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
+            <state relative-caret-position="295">
+              <caret line="145" column="18" lean-forward="false" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
               <folding>
                 <element signature="e#0#101#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfInfo.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/ProfInfo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Profile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/Profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="50" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serwis/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -146,8 +129,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -156,6 +139,9 @@
       <find>static</find>
       <find>stat</find>
       <find>li</find>
+      <find>us()</find>
+      <find>console.log(</find>
+      <find>rak</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,10 +173,11 @@
         <option value="$PROJECT_DIR$/serwis/templates/Base.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Post.html" />
         <option value="$PROJECT_DIR$/serwis/models.py" />
+        <option value="$PROJECT_DIR$/serwis/serializer.py" />
+        <option value="$PROJECT_DIR$/serwis/templates/Ustawienia.html" />
+        <option value="$PROJECT_DIR$/serwis/templates/ProfInfo.html" />
         <option value="$PROJECT_DIR$/AI_Proj/urls.py" />
         <option value="$PROJECT_DIR$/serwis/views.py" />
-        <option value="$PROJECT_DIR$/serwis/templates/ProfInfo.html" />
-        <option value="$PROJECT_DIR$/serwis/templates/Ustawienia.html" />
         <option value="$PROJECT_DIR$/serwis/templates/Znajomi.html" />
         <option value="$PROJECT_DIR$/AI_Proj/settings.py" />
       </list>
@@ -248,46 +235,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="serwis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI_Proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI_Proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serwis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI_Proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI_Proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serwis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -626,21 +573,29 @@
       <option name="project" value="LOCAL" />
       <updated>1513063613246</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Utworzono moduł znajomych. Każdemu zarejstrowanemu użytkownikowi proponowani są znajomi, znajdujący się w pewnej odległości. Użytkownik może obserwować danego użytkownika, oraz przeglądac jego posty i jego infromacje. Zaimplementowano Google Maps API.">
+      <created>1513630274582</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1513630274582</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19849785" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21834764" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.5075107" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26387316" sideWeight="0.5193133" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26840317" sideWeight="0.49195278" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26387316" sideWeight="0.4892704" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26840317" sideWeight="0.48980686" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26387316" sideWeight="0.4806867" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24947442" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272933" sideWeight="0.49248928" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3272933" sideWeight="0.4860515" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -665,34 +620,14 @@
     <MESSAGE value="Utworzenie modelu, bedącego profilem użytkownika. Dodano rejestraację nowych użytkowników serwisu. Utworzono niezbędne widoki oraz szablony. Całość podpięto pod bazę danych MySQL. Dodano superużytkownika." />
     <MESSAGE value="Zmiana zachowania aplikacji w zależności od tego czy użytkownik jest zalogowany. Dodano więcej widoków. Zareejstrowany użytkownik posiada swój profil, może przeglądac swoje posty oraz poty innych. Dodano możliwość usuwania postów" />
     <MESSAGE value="Ukończenie CRUD-a użytkownika. Dodano edycję danych o użytkowniku. Rozbudowano widoki. Podpięto GoogleMaps API." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ukończenie CRUD-a użytkownika. Dodano edycję danych o użytkowniku. Rozbudowano widoki. Podpięto GoogleMaps API." />
+    <MESSAGE value="Utworzono moduł znajomych. Każdemu zarejstrowanemu użytkownikowi proponowani są znajomi, znajdujący się w pewnej odległości. Użytkownik może obserwować danego użytkownika, oraz przeglądac jego posty i jego infromacje. Zaimplementowano Google Maps API." />
+    <option name="LAST_COMMIT_MESSAGE" value="Utworzono moduł znajomych. Każdemu zarejstrowanemu użytkownikowi proponowani są znajomi, znajdujący się w pewnej odległości. Użytkownik może obserwować danego użytkownika, oraz przeglądac jego posty i jego infromacje. Zaimplementowano Google Maps API." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/serwis/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -713,7 +648,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="e#641#682#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -821,13 +758,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c.jpeg" />
     <entry file="file://$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c_dXfqsY4.jpeg" />
-    <entry file="file://$PROJECT_DIR$/media/img/24972383-9db5-44ed-be37-6003ee90670f_20160712071745_Przepis-na-ciasto-ze-sliwkami-63.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -891,11 +822,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/static/o1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/static/s3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -954,14 +880,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/templates/Modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -970,10 +888,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/models.py">
+    <entry file="file://$PROJECT_DIR$/serwis/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="77" column="37" lean-forward="false" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
+        <state relative-caret-position="147">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/templates/ProfInfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -986,46 +914,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/templates/Ustawienia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="58" column="57" lean-forward="false" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="68" column="38" lean-forward="false" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="128" column="29" lean-forward="false" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
+        <state relative-caret-position="295">
+          <caret line="145" column="18" lean-forward="false" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
           <folding>
             <element signature="e#0#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/ProfInfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serwis/templates/Ustawienia.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="93" lean-forward="false" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/serwis/templates/Znajomi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="86" column="173" lean-forward="false" selection-start-line="86" selection-start-column="173" selection-end-line="86" selection-end-column="173" />
+        <state relative-caret-position="231">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding>
-            <element signature="e#7465#7501#0#HTML" expanded="true" />
+            <element signature="e#8377#8413#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/serwis/static/o1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AI_Proj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="e#641#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c_dXfqsY4_eyb7qmr.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/24972383-9db5-44ed-be37-6003ee90670f_20160712071745_Przepis-na-ciasto-ze-sliwkami-63.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/img/9a2463d45a9f7107bef30529f395814c9cd89463.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AI_Proj/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+        <state relative-caret-position="189">
+          <caret line="27" column="17" lean-forward="false" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
           <folding />
         </state>
       </provider>

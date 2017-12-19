@@ -35,7 +35,8 @@
                                 if (status == 'OK') {
                                     var marker2 = new google.maps.Marker({
                                         map: map,
-                                        position: pos
+                                        position: pos,
+                                        title: 'Ty'
                                     });
 
                                     curr = new google.maps.LatLng(pos.lat, pos.lng);
@@ -51,29 +52,36 @@
                 }
 
                 function err() {
-                    var user = '{{ request.user.profil.lokacja }}';
-                    geocoder.geocode({'address': user}, function (results, status) {
-                        if (status == 'OK') {
-                            map.setCenter(results[0].geometry.location);
-                            var marker = new google.maps.Marker({
-                                map: map,
-                                position: results[0].geometry.location
-                            });
-                            curr = results[0].geometry.location;
-                            us();
-                            others();
-                        } else {
-                            alert('Geocode was not successful for the following reason: ' + status);
-                        }
-                    });
+                    {% if request.user.profil.lokacja %}
+                        var user = '{{ request.user.profil.lokacja }}';
+                        geocoder.geocode({'address': user}, function (results, status) {
+                            if (status == 'OK') {
+                                map.setCenter(results[0].geometry.location);
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: results[0].geometry.location,
+                                    title: 'Ty'
+                                });
+                                curr = results[0].geometry.location;
+                                us();
+                                others();
+                            } else {
+                                alert('Geocode was not successful for the following reason: ' + status);
+                            }
+                        });
+                    {% else %}
+                        $("ul.sample").replaceWith("Brak informacji o Twojej lokalizacji");
+                        $("#map-canvas").replaceWith("");
+
+                    {% endif %}
                 }
 
             }
-            function us(){
+            function us() {
                 {% for user in users %}
                     {% if user not in friends and user.profil.lokacja %}
                         var adres = '{{ user.profil.lokacja }}';
-                         geocoder.geocode({'address': adres}, function (results, status) {
+                        geocoder.geocode({'address': adres}, function (results, status) {
                             if (status == 'OK') {
                                 var marker = new google.maps.Marker({
                                     map: map,
@@ -87,16 +95,30 @@
                                 var sth = '<div class="hide"><li>Nazwa: {{ user.username }}<br/>Płeć: {{ user.profil.get_plec_display }} <br/>{% if user.profil.wiek %}Wiek: {{ user.profil.wiek }} lat<br/>{% else %}Wiek: Brak <br/>{% endif %}{% if user.profil.lokacja %}Lokacja: {{ user.profil.lokacja }}<br/>{% else %}Lokacja: Brak<br/>{% endif %}<div class="odl"></div></li><a href="{% url 'znaj_akcje' pk=user.pk action='add' %}" class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Dodaj Znajomego</a></div>';
                                 if (dsfixed < 300) {
                                     $("ul.sample").append(sth);
-                                    $("div.odl").replaceWith("Odległość: " + dsfixed + " km"+ "</br>");
+                                    $("div.odl").replaceWith("Odległość: " + dsfixed + " km" + "</br>");
                                 }
+                                makeEmptyMsg();
                             } else {
                                 alert('Geocode was not successful for the following reason: ' + status);
                             }
                         });
-
                     {% endif %}
                 {% endfor %}
+
+                makeEmptyMsg();
+
             }
+
+            function makeEmptyMsg() {
+                var list = $('ul.sample');
+
+                if (list[0].childNodes.length === 0) {
+                    list.append('<div class="emptyMsg">Brak propozycji znajomych</div>');
+                } else if (list.has('div.emptyMsg') && list[0].childNodes.length !== 1) {
+                    $('div.emptyMsg').remove();
+                }
+            }
+
             function others() {
                 {% for friend in friends %}
                     {% if friend.profil.lokacja %}
@@ -108,7 +130,6 @@
                                     position: results[0].geometry.location,
                                     title: '{{ friend.username }}'
                                 });
-
                             } else {
                                 alert('Geocode was not successful for the following reason: ' + status);
                             }
@@ -132,35 +153,36 @@
         <div class="row">
             <div class="col-md-3">
                 <h4>Proponowani znajomi blisko Ciebie</h4>
-                <ul class="sample">
-                </ul>
+                <ul class="sample"></ul>
             </div>
             <div class="col-md-3">
-                <h4>Osoby, których obserwujesz</h4>
-                {% for friend in friends %}
-                    <ui>
+                <h4>Osoby, które obserwujesz</h4>
+                <ui>
+                    {% for friend in friends %}
                         <li><a href="{% url 'znaj_prof' friend.id %}">{{ friend.username }}</a></li>
                         <a href="{% url 'znaj_akcje' pk=friend.pk action='remove' %}" class="btn btn-danger">
                             <i class="fa fa-trash" aria-hidden="true"></i>
                             Usuń Znajomego
                         </a>
-                    </ui>
-                {% empty %}
-                    Brak znajomych
-                {% endfor %}
+                    {% empty %}
+                        Brak znajomych
+                    {% endfor %}
+                </ui>
+
             </div>
             <div class="col-md-3">
                 <h4>Osoby które Cie obserwują</h4>
-                {% for person in followers %}
-                    <ui>
+                <ui>
+                    {% for person in followers %}
+
                         <li>
                             <a href="{% url 'znaj_prof' person.current_user.pk %}">{{ person }}</a>
                         </li>
+                    {% empty %}
+                        Brak followersow
+                    {% endfor %}
+                </ui>
 
-                    </ui>
-                {% empty %}
-                    Brak followersow
-                {% endfor %}
             </div>
         </div>
         <br/>

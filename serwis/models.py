@@ -45,6 +45,7 @@ class Post(models.Model):
     tresc = models.TextField()
     obraz = models.ImageField(upload_to='img', null=True, blank=True)
 
+
     class Meta:
         ordering = ['-data']
 

@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb59235c-0a28-402f-b35f-e967e2abd42c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/serwis/serializer.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/media/img/75557c89967b1c5d9d162ba98fb7762465551d0c_dXfqsY4_eyb7qmr.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/settings.py" afterPath="$PROJECT_DIR$/AI_Proj/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AI_Proj/urls.py" afterPath="$PROJECT_DIR$/AI_Proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/models.py" afterPath="$PROJECT_DIR$/serwis/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/ProfInfo.html" afterPath="$PROJECT_DIR$/serwis/templates/ProfInfo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Ustawienia.html" afterPath="$PROJECT_DIR$/serwis/templates/Ustawienia.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/templates/Znajomi.html" afterPath="$PROJECT_DIR$/serwis/templates/Znajomi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serwis/views.py" afterPath="$PROJECT_DIR$/serwis/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -580,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513630274582</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dodanie Rest_Framework, prace końcowe.">
+      <created>1513682487674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513682487674</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -621,7 +619,8 @@
     <MESSAGE value="Zmiana zachowania aplikacji w zależności od tego czy użytkownik jest zalogowany. Dodano więcej widoków. Zareejstrowany użytkownik posiada swój profil, może przeglądac swoje posty oraz poty innych. Dodano możliwość usuwania postów" />
     <MESSAGE value="Ukończenie CRUD-a użytkownika. Dodano edycję danych o użytkowniku. Rozbudowano widoki. Podpięto GoogleMaps API." />
     <MESSAGE value="Utworzono moduł znajomych. Każdemu zarejstrowanemu użytkownikowi proponowani są znajomi, znajdujący się w pewnej odległości. Użytkownik może obserwować danego użytkownika, oraz przeglądac jego posty i jego infromacje. Zaimplementowano Google Maps API." />
-    <option name="LAST_COMMIT_MESSAGE" value="Utworzono moduł znajomych. Każdemu zarejstrowanemu użytkownikowi proponowani są znajomi, znajdujący się w pewnej odległości. Użytkownik może obserwować danego użytkownika, oraz przeglądac jego posty i jego infromacje. Zaimplementowano Google Maps API." />
+    <MESSAGE value="Dodanie Rest_Framework, prace końcowe." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie Rest_Framework, prace końcowe." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -893,7 +892,7 @@
         <state relative-caret-position="147">
           <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
